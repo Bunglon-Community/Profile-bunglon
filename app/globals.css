@@ -12,20 +12,20 @@
   --card-foreground: oklch(0.98 0 0);
   --popover: oklch(0.15 0.02 240);
   --popover-foreground: oklch(0.98 0 0);
-  --primary: oklch(0.88 0.18 105);
+  --primary: rgb(115, 234, 36);
   --primary-foreground: oklch(0.12 0.01 240);
   --secondary: oklch(0.2 0.02 240);
   --secondary-foreground: oklch(0.98 0 0);
   --muted: oklch(0.25 0.02 240);
   --muted-foreground: oklch(0.6 0 0);
-  --accent: oklch(0.88 0.18 105);
+  --accent: rgb(115, 234, 36);
   --accent-foreground: oklch(0.12 0.01 240);
   --destructive: oklch(0.55 0.22 20);
   --destructive-foreground: oklch(0.98 0 0);
   --border: oklch(0.25 0.02 240);
   --input: oklch(0.2 0.02 240);
-  --ring: oklch(0.88 0.18 105);
-  --chart-1: oklch(0.88 0.18 105);
+  --ring: rgb(115, 234, 36);
+  --chart-1: rgb(115, 234, 36);
   --chart-2: oklch(0.7 0.15 180);
   --chart-3: oklch(0.65 0.18 280);
   --chart-4: oklch(0.75 0.16 60);
@@ -33,12 +33,29 @@
   --radius: 0rem;
   --sidebar: oklch(0.15 0.02 240);
   --sidebar-foreground: oklch(0.98 0 0);
-  --sidebar-primary: oklch(0.88 0.18 105);
+  --sidebar-primary: rgb(115, 234, 36);
   --sidebar-primary-foreground: oklch(0.12 0.01 240);
   --sidebar-accent: oklch(0.2 0.02 240);
   --sidebar-accent-foreground: oklch(0.98 0 0);
   --sidebar-border: oklch(0.25 0.02 240);
-  --sidebar-ring: oklch(0.88 0.18 105);
+  --sidebar-ring: rgb(115, 234, 36);
+  /* navbar custom */
+  --navbar-bg: rgb(185, 207, 180);
+
+  /* --- Brand Colors (Berdasarkan Logo) --- */
+  --brand-primary: #1D412E;    /* Hijau Tua (Karakter Chameleon) */
+  --brand-secondary: #527E58;  /* Hijau Sedang (Aksen Detail) */
+  --brand-bg-sage: #B9CFB4;    /* Hijau Sage (Background Logo) */
+  --brand-light: #D9E8D6;      /* Hijau Sangat Muda (Highlight) */
+  
+  /* --- Functional Colors --- */
+  --bg-dark: #0D1A14;          /* Background Deep Dark (Pengganti Hitam) */
+  --bg-card: #16261E;          /* Background Card/Container */
+  --text-main: #E0E0E0;        /* Putih Tulang (Nyaman di mata) */
+  --text-muted: #A0B0A8;       /* Teks Abu-abu Kehijauan */
+  
+  /* --- UI Accents --- */
+  --accent-neon-muted: #4ADE80; /* Hijau Terang tapi tidak terlalu silau */
 }
 
 @theme inline {
@@ -105,13 +122,13 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: oklch(0.88 0.18 105);
+    background: rgb(115, 234, 36);;
     border-radius: 4px;
     transition: background 0.3s ease;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: oklch(0.78 0.16 105);
+    background: rgb(115, 234, 36);;
   }
 
   /* Added smooth transitions for all interactive elements */
