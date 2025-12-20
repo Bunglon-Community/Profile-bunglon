@@ -3,6 +3,8 @@
 import { Navbar } from "@/components/navbar"
 import { motion } from "framer-motion"
 import { Gamepad2, Cloud, Bot, Wallet, Palette, Activity } from "lucide-react"
+import Image from "next/image";
+import logoBunglon from "@/assets/images/logo-bunglonv2.png";
 
 const projects = [
   {
@@ -145,8 +147,19 @@ export default function ProjectsPage() {
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <span className="text-2xl">🦎</span>
-              <span className="text-lg font-bold">Bunglon Community</span>
+                            <span className="text-3xl transition-transform group-hover:scale-110">
+                              <Image 
+                                src={logoBunglon}
+                                alt="Bunglon Community Logo"
+                                width={50}
+                                height={50}
+                                className="rounded-full transition-transform group-hover:scale-110"
+                              />
+                            </span>
+              <span className="text-xl font-bold tracking-tight">
+                <span className="text-foreground">Bunglon</span>
+                <span className="text-primary ml-1">Community</span>
+              </span>
             </div>
             <p className="text-muted-foreground text-sm">© 2025 Bunglon Community. All rights reserved</p>
           </div>

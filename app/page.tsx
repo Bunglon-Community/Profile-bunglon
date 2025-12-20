@@ -5,6 +5,8 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import Link from "next/link"
 import { ArrowRight, Users, Lightbulb, FolderOpen } from "lucide-react"
 import { useRef } from "react"
+import logoBunglon from "@/assets/images/logo-bunglonv2.png";
+import Image from "next/image";
 
 export default function HomePage() {
   const heroRef = useRef(null)
@@ -22,7 +24,7 @@ export default function HomePage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary to-background">
           <div className="absolute inset-0 opacity-30">
             <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" />
@@ -196,8 +198,19 @@ export default function HomePage() {
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <span className="text-2xl">🦎</span>
-              <span className="text-lg font-bold">Bunglon Community</span>
+                            <span className="text-3xl transition-transform group-hover:scale-110">
+                              <Image 
+                                src={logoBunglon}
+                                alt="Bunglon Community Logo"
+                                width={50}
+                                height={50}
+                                className="rounded-full transition-transform group-hover:scale-110"
+                              />
+                            </span>
+              <span className="text-xl font-bold tracking-tight">
+                <span className="text-foreground">Bunglon</span>
+                <span className="text-primary ml-1">Community</span>
+              </span>
             </div>
             <p className="text-muted-foreground text-sm">© 2025 Bunglon Community. All rights reserved</p>
           </div>
