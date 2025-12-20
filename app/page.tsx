@@ -17,7 +17,8 @@ export default function HomePage() {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8])
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background"
+    >
       <Navbar />
 
       {/* Hero Section */}
@@ -37,10 +38,10 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-6"
+            className="pt-10"
           >
             <span className="inline-block px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-medium mb-6">
-              Welcome to Bunglon Community
+              Welcome To Bunglon Community
             </span>
           </motion.div>
 
@@ -93,13 +94,7 @@ export default function HomePage() {
           transition={{ delay: 1.5, duration: 1 }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2"
         >
-          <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center p-1">
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
-              className="w-1.5 h-1.5 bg-primary rounded-full"
-            />
-          </div>
+
         </motion.div>
       </section>
 

@@ -8,11 +8,11 @@
   /* Dark theme with yellow-green accents */
   --background: oklch(0.12 0.01 240);
   --foreground: oklch(0.98 0 0);
-  --card: oklch(0.15 0.02 240);
+  --card: #141814;
   --card-foreground: oklch(0.98 0 0);
   --popover: oklch(0.15 0.02 240);
   --popover-foreground: oklch(0.98 0 0);
-  --primary: rgb(115, 234, 36);
+  --primary: #4ADE80;
   --primary-foreground: oklch(0.12 0.01 240);
   --secondary: oklch(0.2 0.02 240);
   --secondary-foreground: oklch(0.98 0 0);
@@ -39,8 +39,10 @@
   --sidebar-accent-foreground: oklch(0.98 0 0);
   --sidebar-border: oklch(0.25 0.02 240);
   --sidebar-ring: rgb(115, 234, 36);
+
+
   /* navbar custom */
-  --navbar-bg: rgb(185, 207, 180);
+  --navbar-bg: rgba(13, 26, 20, 0.8);
 
   /* --- Brand Colors (Berdasarkan Logo) --- */
   --brand-primary: #1D412E;    /* Hijau Tua (Karakter Chameleon) */
@@ -128,7 +130,7 @@
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: rgb(115, 234, 36);;
+    background: oklch(0.15 0.02 240);
   }
 
   /* Added smooth transitions for all interactive elements */
@@ -137,6 +139,21 @@
     transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   }
 }
+
+/* .navbar-bunglon {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  background-color: rgba(13, 26, 20, 0.85); 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(185, 207, 180, 0.1);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
 
 /* Added custom animation keyframes */
 @keyframes float {

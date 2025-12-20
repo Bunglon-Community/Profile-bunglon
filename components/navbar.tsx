@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation"
 import { motion } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
+import  logoBunglon  from "@/assets/images/logo-bunglonv2.png";
+import Image from "next/image";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -21,11 +23,22 @@ export function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
+      <nav
+        className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b"
+        
+      >
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <Link href="/" className="flex items-center gap-3 group">
-              <span className="text-3xl transition-transform group-hover:scale-110">🦎</span>
+              <span className="text-3xl transition-transform group-hover:scale-110">
+                <Image 
+                  src={logoBunglon}
+                  alt="Bunglon Community Logo"
+                  width={50}
+                  height={50}
+                  className="rounded-full transition-transform group-hover:scale-110"
+                />
+              </span>
               <span className="text-xl font-bold tracking-tight">
                 <span className="text-foreground">Bunglon</span>
                 <span className="text-primary ml-1">Community</span>
