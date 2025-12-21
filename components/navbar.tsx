@@ -11,8 +11,8 @@ import Image from "next/image";
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/members", label: "Members" },
-  { href: "/skills", label: "Skills" },
-  { href: "/projects", label: "Projects" },
+  // { href: "/skills", label: "Skills" },
+  // { href: "/projects", label: "Projects" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ]
@@ -40,8 +40,8 @@ export function Navbar() {
                 />
               </span>
               <span className="text-xl font-bold tracking-tight">
-                <span className="text-foreground">Bunglon</span>
-                <span className="text-primary ml-1">Community</span>
+                <span className="text-primary">Bunglon</span>
+                <span className="text-foreground ml-1">Community</span>
               </span>
             </Link>
 

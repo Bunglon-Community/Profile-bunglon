@@ -80,12 +80,12 @@ export default function HomePage() {
               Meet Our Team
               <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
             </Link>
-            <Link
+            {/* <Link
               href="/projects"
               className="px-8 py-4 bg-secondary text-secondary-foreground rounded-lg font-semibold hover:bg-secondary/80 transition-all border border-border"
             >
               View Projects
-            </Link>
+            </Link> */}
           </motion.div>
         </motion.div>
 
@@ -121,7 +121,7 @@ export default function HomePage() {
       {/* Features Grid */}
       <section className="py-32 px-4">
         <div className="container mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(400px,360px))] justify-center gap-20 justify-items-center">
             {[
               {
                 icon: Users,
@@ -129,18 +129,18 @@ export default function HomePage() {
                 description: "Meet the talented individuals behind Bunglon Community",
                 href: "/members",
               },
-              {
-                icon: Lightbulb,
-                title: "Skills",
-                description: "Explore the diverse expertise and capabilities we bring",
-                href: "/skills",
-              },
-              {
-                icon: FolderOpen,
-                title: "Projects",
-                description: "Discover the innovative work we've created together",
-                href: "/projects",
-              },
+              // {
+              //   icon: Lightbulb,
+              //   title: "Skills",
+              //   description: "Explore the diverse expertise and capabilities we bring",
+              //   href: "/skills",
+              // },
+              // {
+              //   icon: FolderOpen,
+              //   title: "Projects",
+              //   description: "Discover the innovative work we've created together",
+              //   href: "/projects",
+              // },
             ].map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -208,8 +208,8 @@ export default function HomePage() {
                               />
                             </span>
               <span className="text-xl font-bold tracking-tight">
-                <span className="text-foreground">Bunglon</span>
-                <span className="text-primary ml-1">Community</span>
+                <span className="text-primary">Bunglon</span>
+                <span className="text-foreground ml-1">Community</span>
               </span>
             </div>
             <p className="text-muted-foreground text-sm">© 2025 Bunglon Community. All rights reserved</p>

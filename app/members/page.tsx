@@ -17,7 +17,7 @@ const members = [
   { name: "Muhammad Nuril Mubin", role: "Network Admin", avatar: avatarImg },
 ]
 
-const advisory = {
+const pemimpin = {
   name: "Muha Akmal Ni'am",
   role: "Donatur Bunglon Nih Bosss",
   avatar: akmalImg,
@@ -84,7 +84,7 @@ export default function MembersPage() {
             ))}
           </div>
 
-          {/* Advisory Section */}
+          {/* Ketua */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -93,25 +93,25 @@ export default function MembersPage() {
             className="max-w-md mx-auto"
           >
             <h2 className="text-3xl font-bold text-center mb-8">
-              <span className="text-primary">Advisory</span> Board
+              Ketua <span className="text-primary">Bunglon</span>
             </h2>
             <div className="bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-primary rounded-xl p-10 text-center">
               <div className="w-28 h-28 mx-auto mb-6 bg-primary/20 rounded-full flex items-center justify-center text-6xl">
-                {advisory.avatar ? (
+                {pemimpin.avatar ? (
                   <Image 
-                    src={advisory.avatar}
-                    alt={advisory.name}
+                    src={pemimpin.avatar}
+                    alt={pemimpin.name}
                     width={112}
                     height={112}
                     className="w-full h-full object-cover rounded-full"
                     style={{ objectPosition: "center top" }}
                   />
                 ) : (
-                  <span>{advisory.name.split(" ").map(n => n[0]).slice(0,2).join("")}</span>
+                  <span>{pemimpin.name.split(" ").map(n => n[0]).slice(0,2).join("")}</span>
                 )}
               </div>
-              <h3 className="text-2xl font-bold mb-2">{advisory.name}</h3>
-              <p className="text-muted-foreground text-lg">{advisory.role}</p>
+              <h3 className="text-2xl font-bold mb-2">{pemimpin.name}</h3>
+              <p className="text-muted-foreground text-lg">{pemimpin.role}</p>
             </div>
           </motion.div>
         </div>
@@ -135,8 +135,8 @@ export default function MembersPage() {
                               />
                             </span>
               <span className="text-xl font-bold tracking-tight">
-                <span className="text-foreground">Bunglon</span>
-                <span className="text-primary ml-1">Community</span>
+                <span className="text-primary">Bunglon</span>
+                <span className="text-foreground ml-1">Community</span>
               </span>
             </div>
             <p className="text-muted-foreground text-sm">© 2025 Bunglon Community. All rights reserved</p>

@@ -10,9 +10,7 @@ import Image from "next/image";
 
 
 const socialLinks = [
-	{ platform: "Discord", icon: MessageCircle, url: "#" },
 	{ platform: "GitHub", icon: Github, url: process.env.GITHUB_URL },
-	{ platform: "Twitter", icon: Twitter, url: "#" },
 	{ platform: "Instagram", icon: Instagram, url: "#" },
 ]
 
@@ -24,14 +22,25 @@ export default function ContactPage() {
 	})
 	const [submitted, setSubmitted] = useState(false)
 
-	const handleSubmit = (e: React.FormEvent) => {
-		e.preventDefault()
-		setSubmitted(true)
-		setTimeout(() => {
-			setSubmitted(false)
-			setFormData({ name: "", email: "", message: "" })
-		}, 3000)
-	}
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault()
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            })
+            if (!res.ok) throw new Error("Failed to send")
+            setSubmitted(true)
+            setTimeout(() => {
+                setSubmitted(false)
+                setFormData({ name: "", email: "", message: "" })
+            }, 3000)
+        } catch (err) {
+            console.error(err)
+            alert("Gagal mengirim pesan. Coba lagi nanti.")
+        }
+    }
 
 	return (
 		<div className="min-h-screen bg-background">
@@ -80,7 +89,7 @@ export default function ContactPage() {
 										<div>
 											<h3 className="font-semibold mb-1">Email</h3>
 											<p className="text-muted-foreground">
-												bunglon
+												communitybunglon@gmail.com
 											</p>
 										</div>
 									</div>
@@ -92,7 +101,7 @@ export default function ContactPage() {
 										<div>
 											<h3 className="font-semibold mb-1">Location</h3>
 											<p className="text-muted-foreground">
-												Remote - Worldwide
+												Jawa Tengah - Indonesia
 											</p>
 										</div>
 									</div>
@@ -234,8 +243,8 @@ export default function ContactPage() {
                               />
                             </span>
               <span className="text-xl font-bold tracking-tight">
-                <span className="text-foreground">Bunglon</span>
-                <span className="text-primary ml-1">Community</span>
+                <span className="text-primary">Bunglon</span>
+                <span className="text-foreground ml-1">Community</span>
               </span>
             </div>
             <p className="text-muted-foreground text-sm">© 2025 Bunglon Community. All rights reserved</p>

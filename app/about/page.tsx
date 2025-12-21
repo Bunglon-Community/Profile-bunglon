@@ -166,8 +166,8 @@ export default function AboutPage() {
                               />
                             </span>
               <span className="text-xl font-bold tracking-tight">
-                <span className="text-foreground">Bunglon</span>
-                <span className="text-primary ml-1">Community</span>
+                <span className="text-primary">Bunglon</span>
+                <span className="text-foreground ml-1">Community</span>
               </span>
             </div>
             <p className="text-muted-foreground text-sm">© 2025 Bunglon Community. All rights reserved</p>
